@@ -10,6 +10,7 @@ RUN tar xfz v$CUBES_VERSION.tar.gz \
   && cd cubes-$CUBES_VERSION \
   && pip --quiet install --requirement requirements.txt \
   && pip --quiet install --requirement requirements-optional.txt \
+  && pip --quiet install pymysql \
   && python setup.py install
 
 VOLUME /data
