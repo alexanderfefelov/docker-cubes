@@ -8,8 +8,8 @@ ADD container/ /
 RUN tar xfz v$CUBES_VERSION.tar.gz \
   && rm --force v$CUBES_VERSION.tar.gz \
   && cd cubes-$CUBES_VERSION \
-  && pip --quiet install -r requirements.txt \
-  && pip --quiet install -r requirements-optional.txt \
+  && pip --quiet install --requirement requirements.txt \
+  && pip --quiet install --requirement requirements-optional.txt \
   && python setup.py install
 
 VOLUME /data
