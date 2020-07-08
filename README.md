@@ -4,6 +4,7 @@
 
     docker run --name cubes \
       --detach \
+      --restart unless-stopped \
       --volume /etc/localtime:/etc/localtime:ro \
       --volume cubes-data:/data \
       --publish 5000:5000 \
