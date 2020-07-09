@@ -6,7 +6,7 @@
       --detach \
       --restart unless-stopped \
       --volume /etc/localtime:/etc/localtime:ro \
-      --volume cubes-data:/data \
+      --volume cubes-workspace:/workspace \
       --publish 5000:5000 \
       --health-cmd /healthcheck.sh \
       --health-start-period 3s \
