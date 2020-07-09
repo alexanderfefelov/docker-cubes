@@ -2,7 +2,8 @@
 
 [Cubes](https://github.com/DataBrewery/cubes) in a Docker container.
 
-    docker run --name cubes \
+    docker run
+      --name cubes \
       --detach \
       --restart unless-stopped \
       --volume /etc/localtime:/etc/localtime:ro \

@@ -13,7 +13,9 @@ RUN apt-get -qq update \
   && cd cubes-$VERSION \
   && pip --quiet install --requirement requirements.txt \
   && pip --quiet install --requirement requirements-optional.txt \
-  && pip --quiet install pymysql \
+  && pip --quiet install \
+       psycopg2 \
+       pymysql \
   && python setup.py install \
   && apt-get -qq clean \
   && rm --recursive --force /var/lib/apt/lists/* /tmp/* /var/tmp/* \
