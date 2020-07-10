@@ -8,7 +8,7 @@ ADD container/ /
 ADD https://github.com/DataBrewery/cubes/archive/$CUBES_STUFF /
 
 RUN apt-get -qq update \
-  && apt-get -qq --no-install-recommends install \
+  && apt-get -qq install --no-install-recommends \
        curl \
        > /dev/null \
   && tar xfz $CUBES_STUFF \
