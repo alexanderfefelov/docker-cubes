@@ -9,7 +9,7 @@ ADD https://github.com/DataBrewery/cubes/archive/$CUBES_STUFF /
 
 RUN apt-get -qq update \
   && apt-get -qq install --no-install-recommends \
-       curl \
+       curl `# For health checks` \
        > /dev/null \
   && tar xfz $CUBES_STUFF \
   && cd cubes-$CUBES_VERSION \
