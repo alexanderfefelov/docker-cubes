@@ -1,8 +1,8 @@
 FROM python:3.8
 
-ENV CUBES_VERSION=1.1
+ARG CUBES_VERSION=1.1
 
-ENV CUBES_STUFF=v$CUBES_VERSION.tar.gz
+ARG CUBES_STUFF=v$CUBES_VERSION.tar.gz
 
 ADD container/ /
 ADD https://github.com/DataBrewery/cubes/archive/$CUBES_STUFF /
