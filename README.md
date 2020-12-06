@@ -11,4 +11,4 @@
       --publish 5000:5000 \
       --health-cmd /healthcheck.sh --health-start-period 3s --health-interval 1m --health-timeout 1s --health-retries 3 \
       --log-opt max-size=10m --log-opt max-file=5 \
-      alexanderfefelov/cubes
+      quay.io/alexanderfefelov/cubes
